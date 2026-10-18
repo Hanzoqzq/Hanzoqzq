@@ -3,5 +3,5 @@
 </p>
 
 <p align="center">
-  <img src="about-v4.svg" alt="Player card" width="100%">
+  <img src="about-v8.svg" alt="Player card" width="100%">
 </p>
