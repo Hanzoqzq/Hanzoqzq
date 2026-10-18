@@ -1,27 +1,28 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 280" width="900" height="280">
 <defs>
   <linearGradient id="g" x1="0" x2="1">
-    <stop offset="0" stop-color="#00f0ff"/><stop offset="1" stop-color="#8a5cff"/>
+    <stop offset="0" stop-color="#ff3d81"/><stop offset="0.55" stop-color="#ff9a3c"/><stop offset="1" stop-color="#ffe14d"/>
   </linearGradient>
-  <linearGradient id="sweep" x1="0" x2="1">
-    <stop offset="0" stop-color="#00f0ff" stop-opacity="0"/>
-    <stop offset="0.5" stop-color="#00f0ff"/>
-    <stop offset="1" stop-color="#00f0ff" stop-opacity="0"/>
+  <linearGradient id="sun" x1="0" x2="0" y1="0" y2="1">
+    <stop offset="0" stop-color="#ffe14d"/><stop offset="1" stop-color="#ff3d81"/>
   </linearGradient>
-  <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
-    <path d="M30 0H0V30" fill="none" stroke="#1b2230" stroke-width="1"/>
-    <animateTransform attributeName="patternTransform" type="translate" from="0 0" to="30 30" dur="4s" repeatCount="indefinite"/>
-  </pattern>
   <radialGradient id="glow" cx="0.5" cy="0.5" r="0.5">
-    <stop offset="0" stop-color="#8a5cff" stop-opacity="0.35"/>
-    <stop offset="1" stop-color="#8a5cff" stop-opacity="0"/>
+    <stop offset="0" stop-color="#ff3d81" stop-opacity="0.45"/><stop offset="1" stop-color="#ff3d81" stop-opacity="0"/>
   </radialGradient>
-  <clipPath id="type">
-    <rect x="40" y="165" height="30" width="0">
-      <animate attributeName="width" values="0;330;330;0" keyTimes="0;0.4;0.9;1" dur="8s" repeatCount="indefinite"/>
-    </rect>
-  </clipPath>
+  <linearGradient id="sweep" x1="0" x2="1">
+    <stop offset="0" stop-color="#ffe14d" stop-opacity="0"/><stop offset="0.5" stop-color="#ffe14d"/><stop offset="1" stop-color="#ffe14d" stop-opacity="0"/>
+  </linearGradient>
+  <linearGradient id="hz" x1="0" x2="1">
+    <stop offset="0" stop-color="#ff3d81" stop-opacity="0"/><stop offset="0.5" stop-color="#ff9a3c"/><stop offset="1" stop-color="#ff3d81" stop-opacity="0"/>
+  </linearGradient>
   <clipPath id="frame"><rect width="900" height="280" rx="14"/></clipPath>
+  <clipPath id="floor"><rect y="240" width="900" height="40"/></clipPath>
+  <clipPath id="t1"><rect x="40" y="165" height="30" width="0">
+    <animate attributeName="width" values="0;290;290;0;0" keyTimes="0;0.12;0.28;0.33;1" dur="12s" repeatCount="indefinite"/></rect></clipPath>
+  <clipPath id="t2"><rect x="40" y="165" height="30" width="0">
+    <animate attributeName="width" values="0;0;204;204;0;0" keyTimes="0;0.33;0.43;0.58;0.61;1" dur="12s" repeatCount="indefinite"/></rect></clipPath>
+  <clipPath id="t3"><rect x="40" y="165" height="30" width="0">
+    <animate attributeName="width" values="0;0;290;290;0" keyTimes="0;0.61;0.72;0.94;1" dur="12s" repeatCount="indefinite"/></rect></clipPath>
 </defs>
 <style>
   text{font-family:"Courier New",Courier,monospace}
@@ -34,59 +35,86 @@
 </style>
 
 <g clip-path="url(#frame)">
-  <rect width="900" height="280" fill="#0a0c11"/>
-  <rect width="900" height="280" fill="url(#grid)"/>
-  <circle cx="760" cy="140" r="150" fill="url(#glow)"/>
+  <rect width="900" height="280" fill="#0d0716"/>
 
-  <text x="40" y="52" font-size="13" fill="#5c6b82">hanzo@termux:~$ <tspan fill="#8a97ab">whoami</tspan></text>
-  <circle cx="860" cy="46" r="4" fill="#27ff7a"><animate attributeName="opacity" values="1;0.2;1" dur="1.6s" repeatCount="indefinite"/></circle>
-  <text x="846" y="50" font-size="12" fill="#5c6b82" text-anchor="end">online</text>
+  <g fill="#fff">
+    <circle cx="500" cy="30" r="1.5"><animate attributeName="opacity" values="0.2;1;0.2" dur="2.1s" repeatCount="indefinite"/></circle>
+    <circle cx="545" cy="80" r="1.5"><animate attributeName="opacity" values="1;0.2;1" dur="3s" repeatCount="indefinite"/></circle>
+    <circle cx="595" cy="48" r="2"><animate attributeName="opacity" values="0.2;1;0.2" dur="2.6s" repeatCount="indefinite"/></circle>
+    <circle cx="645" cy="92" r="1.5"><animate attributeName="opacity" values="1;0.2;1" dur="1.8s" repeatCount="indefinite"/></circle>
+    <circle cx="680" cy="28" r="1.5"><animate attributeName="opacity" values="0.2;1;0.2" dur="3.4s" repeatCount="indefinite"/></circle>
+    <circle cx="845" cy="38" r="2"><animate attributeName="opacity" values="1;0.2;1" dur="2.4s" repeatCount="indefinite"/></circle>
+    <circle cx="872" cy="92" r="1.5"><animate attributeName="opacity" values="0.2;1;0.2" dur="2s" repeatCount="indefinite"/></circle>
+    <circle cx="820" cy="75" r="1.5"><animate attributeName="opacity" values="1;0.2;1" dur="2.9s" repeatCount="indefinite"/></circle>
+    <circle cx="440" cy="60" r="1.5"><animate attributeName="opacity" values="0.2;1;0.2" dur="3.2s" repeatCount="indefinite"/></circle>
+  </g>
+
+  <circle cx="760" cy="168" r="140" fill="url(#glow)">
+    <animate attributeName="opacity" values="0.6;1;0.6" dur="3s" repeatCount="indefinite"/>
+  </circle>
+  <circle cx="760" cy="168" r="70" fill="url(#sun)"/>
+  <g fill="#0d0716">
+    <rect x="685" y="178" width="150" height="2"/>
+    <rect x="685" y="190" width="150" height="3"/>
+    <rect x="685" y="202" width="150" height="4"/>
+    <rect x="685" y="215" width="150" height="5"/>
+    <rect x="685" y="228" width="150" height="6"/>
+  </g>
+
+  <g fill="#29e7ff">
+    <animateTransform attributeName="transform" type="translate" values="733 28;747 22;733 28;719 22;733 28" dur="4s" repeatCount="indefinite"/>
+    <path d="M10 0h5v5h-5z M40 0h5v5h-5z M15 5h5v5h-5z M35 5h5v5h-5z M10 10h35v5h-35z M5 15h10v5h-10z M20 15h15v5h-15z M40 15h10v5h-10z M0 20h55v5h-55z M0 25h5v5h-5z M10 25h35v5h-35z M50 25h5v5h-5z M0 30h5v5h-5z M10 30h5v5h-5z M40 30h5v5h-5z M50 30h5v5h-5z M15 35h10v5h-10z M30 35h10v5h-10z"/>
+  </g>
+
+  <rect y="240" width="900" height="40" fill="#120a1f"/>
+  <g clip-path="url(#floor)">
+    <path d="M50 240L-350 280 M130 240L-190 280 M210 240L-30 280 M290 240L130 280 M370 240L290 280 M450 240L450 280 M530 240L610 280 M610 240L770 280 M690 240L930 280 M770 240L1090 280 M850 240L1250 280" stroke="#ff3d81" stroke-opacity="0.5" stroke-width="1" fill="none"/>
+    <rect x="0" y="240" width="900" height="1.5" fill="#ff3d81">
+      <animate attributeName="y" values="240;280" keyTimes="0;1" calcMode="spline" keySplines="0.6 0 1 1" dur="2.4s" begin="0s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.2;0.9" dur="2.4s" begin="0s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="0" y="240" width="900" height="1.5" fill="#ff3d81">
+      <animate attributeName="y" values="240;280" keyTimes="0;1" calcMode="spline" keySplines="0.6 0 1 1" dur="2.4s" begin="-0.6s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.2;0.9" dur="2.4s" begin="-0.6s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="0" y="240" width="900" height="1.5" fill="#ff3d81">
+      <animate attributeName="y" values="240;280" keyTimes="0;1" calcMode="spline" keySplines="0.6 0 1 1" dur="2.4s" begin="-1.2s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.2;0.9" dur="2.4s" begin="-1.2s" repeatCount="indefinite"/>
+    </rect>
+    <rect x="0" y="240" width="900" height="1.5" fill="#ff3d81">
+      <animate attributeName="y" values="240;280" keyTimes="0;1" calcMode="spline" keySplines="0.6 0 1 1" dur="2.4s" begin="-1.8s" repeatCount="indefinite"/>
+      <animate attributeName="opacity" values="0.2;0.9" dur="2.4s" begin="-1.8s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+  <rect y="238.5" width="900" height="2.5" fill="url(#hz)"/>
+  <rect x="-200" y="238" width="200" height="3.5" fill="url(#sweep)">
+    <animate attributeName="x" values="-200;900" dur="3s" repeatCount="indefinite"/>
+  </rect>
+
+  <text x="40" y="52" font-size="13" fill="#8a6aa8">hanzo@dev:~$ <tspan fill="#c9a8ee">whoami</tspan></text>
+  <circle cx="860" cy="46" r="4" fill="#3dff9a"><animate attributeName="opacity" values="1;0.2;1" dur="1.6s" repeatCount="indefinite"/></circle>
+  <text x="846" y="50" font-size="12" fill="#8a6aa8" text-anchor="end">live</text>
 
   <g font-size="86" font-weight="bold" letter-spacing="6">
-    <text class="g1" x="40" y="145" fill="#00f0ff" opacity="0.7">HANZO</text>
-    <text class="g2" x="40" y="145" fill="#ff2e88" opacity="0.7">HANZO</text>
+    <text class="g1" x="40" y="145" fill="#29e7ff" opacity="0.7">HANZO</text>
+    <text class="g2" x="40" y="145" fill="#ffe14d" opacity="0.6">HANZO</text>
     <text x="40" y="145" fill="url(#g)">HANZO</text>
   </g>
 
-  <g clip-path="url(#type)">
-    <text x="42" y="187" font-size="20" fill="#d7e0ee">&gt; WhatsApp Bot Developer</text>
+  <g font-size="20" fill="#f3e9ff">
+    <g clip-path="url(#t1)"><text x="42" y="187">&gt; WhatsApp Bot Developer</text></g>
+    <g clip-path="url(#t2)"><text x="42" y="187">&gt; Baileys Enjoyer</text></g>
+    <g clip-path="url(#t3)"><text x="42" y="187">&gt; Bug Hunter (sometimes)</text></g>
   </g>
-  <rect class="blink" x="0" y="169" width="10" height="20" fill="#00f0ff">
-    <animate attributeName="x" values="42;372;372;42" keyTimes="0;0.4;0.9;1" dur="8s" repeatCount="indefinite"/>
+  <rect class="blink" x="42" y="169" width="10" height="20" fill="#ffe14d">
+    <animate attributeName="x" values="42;332;332;42;246;246;42;332;332;42" keyTimes="0;0.12;0.28;0.33;0.43;0.58;0.61;0.72;0.94;1" dur="12s" repeatCount="indefinite"/>
   </rect>
 
-  <text x="42" y="228" font-size="13" fill="#5c6b82">node.js  /  baileys  /  pterodactyl  /  termux</text>
+  <text x="42" y="224" font-size="13" fill="#8a6aa8">node.js  /  baileys  /  pterodactyl</text>
 
-  <g>
-    <circle cx="760" cy="140" r="70" fill="none" stroke="#00f0ff" stroke-width="1.5" stroke-dasharray="6 10" opacity="0.8">
-      <animateTransform attributeName="transform" type="rotate" from="0 760 140" to="360 760 140" dur="14s" repeatCount="indefinite"/>
-    </circle>
-    <circle cx="760" cy="140" r="52" fill="none" stroke="#8a5cff" stroke-width="1.5" stroke-dasharray="2 8" opacity="0.9">
-      <animateTransform attributeName="transform" type="rotate" from="360 760 140" to="0 760 140" dur="9s" repeatCount="indefinite"/>
-    </circle>
-    <polygon points="760,112 784.2,126 784.2,154 760,168 735.8,154 735.8,126" fill="none" stroke="url(#g)" stroke-width="2">
-      <animate attributeName="stroke-width" values="2;4;2" dur="2.4s" repeatCount="indefinite"/>
-    </polygon>
-    <circle r="4" fill="#00f0ff">
-      <animateMotion dur="5s" repeatCount="indefinite" path="M690,140 a70,70 0 1,0 140,0 a70,70 0 1,0 -140,0"/>
-    </circle>
-  </g>
-
-  <g font-size="16" fill="#3a4a63">
-    <text x="640" y="90">&lt;/&gt;<animate attributeName="y" values="90;70;90" dur="5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.2;0.9;0.2" dur="5s" repeatCount="indefinite"/></text>
-    <text x="850" y="220">{ }<animate attributeName="y" values="220;200;220" dur="6s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.2;0.9;0.2" dur="6s" repeatCount="indefinite"/></text>
-    <text x="660" y="235">0x1F<animate attributeName="y" values="235;215;235" dur="7s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.2;0.9;0.2" dur="7s" repeatCount="indefinite"/></text>
-    <text x="845" y="95">;<animate attributeName="y" values="95;75;95" dur="4.5s" repeatCount="indefinite"/><animate attributeName="opacity" values="0.2;0.9;0.2" dur="4.5s" repeatCount="indefinite"/></text>
-  </g>
-
-  <rect y="0" width="900" height="3" fill="#00f0ff" opacity="0.08">
+  <rect y="0" width="900" height="3" fill="#ff3d81" opacity="0.06">
     <animate attributeName="y" values="-5;285" dur="3.5s" repeatCount="indefinite"/>
   </rect>
-
-  <line x1="0" y1="262" x2="900" y2="262" stroke="#1b2230" stroke-width="2"/>
-  <rect x="-200" y="260" width="200" height="4" fill="url(#sweep)">
-    <animate attributeName="x" values="-200;900" dur="3s" repeatCount="indefinite"/>
-  </rect>
 </g>
-<rect x="1" y="1" width="898" height="278" rx="14" fill="none" stroke="#1b2230" stroke-width="2"/>
+<rect x="1" y="1" width="898" height="278" rx="14" fill="none" stroke="#2a1740" stroke-width="2"/>
 </svg>

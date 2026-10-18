@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 260" width="900" height="260">
 <defs>
   <linearGradient id="g" x1="0" x2="1">
-    <stop offset="0" stop-color="#00f0ff"/><stop offset="1" stop-color="#8a5cff"/>
+    <stop offset="0" stop-color="#ff3d81"/><stop offset="0.55" stop-color="#ff9a3c"/><stop offset="1" stop-color="#ffe14d"/>
   </linearGradient>
   <pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
-    <path d="M30 0H0V30" fill="none" stroke="#1b2230" stroke-width="1"/>
+    <path d="M30 0H0V30" fill="none" stroke="#1e1230" stroke-width="1"/>
   </pattern>
   <clipPath id="frame"><rect width="900" height="260" rx="14"/></clipPath>
 </defs>
@@ -12,60 +12,69 @@
   text{font-family:"Courier New",Courier,monospace}
   .blink{animation:bl 1s steps(2) infinite}
   @keyframes bl{50%{opacity:0}}
-  .l{fill:#5c6b82}.v{fill:#d7e0ee}
+  .l{fill:#8a6aa8}.v{fill:#f3e9ff}
 </style>
 <g clip-path="url(#frame)">
-  <rect width="900" height="260" fill="#0a0c11"/>
+  <rect width="900" height="260" fill="#0d0716"/>
   <rect width="900" height="260" fill="url(#grid)"/>
 
   <text x="40" y="45" font-size="13" class="l">[ PLAYER 01 ]</text>
+  <text x="330" y="45" font-size="14" fill="#ff3d81" text-anchor="end">HP ♥ ♥ ♥
+    <animate attributeName="opacity" values="1;0.55;1" dur="1.4s" repeatCount="indefinite"/>
+  </text>
   <text x="40" y="95" font-size="42" font-weight="bold" fill="url(#g)" letter-spacing="3">HANZO</text>
 
+  <g>
+    <rect x="200" y="62" width="66" height="24" rx="4" fill="#ffe14d"/>
+    <text x="233" y="79" font-size="14" font-weight="bold" fill="#0d0716" text-anchor="middle">LV.99</text>
+    <animate attributeName="opacity" values="1;0.65;1" dur="2s" repeatCount="indefinite"/>
+  </g>
+
   <text x="40" y="137" font-size="15"><tspan class="l">CLASS </tspan><tspan class="v">Bot Developer</tspan></text>
-  <text x="40" y="162" font-size="15"><tspan class="l">BASE  </tspan><tspan class="v">Termux / Android</tspan></text>
+  <text x="40" y="162" font-size="15"><tspan class="l">BASE  </tspan><tspan class="v">Android</tspan></text>
   <text x="40" y="187" font-size="15"><tspan class="l">QUEST </tspan><tspan class="v">Building WhatsApp bots</tspan></text>
 
   <text x="40" y="226" font-size="13" class="l">XP</text>
-  <rect x="70" y="216" width="260" height="10" rx="2" fill="#141a26"/>
-  <rect x="70" y="216" width="0" height="10" rx="2" fill="#27ff7a">
+  <rect x="70" y="216" width="260" height="10" rx="2" fill="#1a1028"/>
+  <rect x="70" y="216" width="0" height="10" rx="2" fill="#3dff9a">
     <animate attributeName="width" values="0;190;190;0" keyTimes="0;0.35;0.9;1" dur="7s" repeatCount="indefinite"/>
   </rect>
 
-  <line x1="400" y1="35" x2="400" y2="235" stroke="#1b2230" stroke-width="2"/>
+  <line x1="400" y1="35" x2="400" y2="235" stroke="#2a1740" stroke-width="2"/>
 
   <text x="430" y="45" font-size="13" class="l">[ STATS ]</text>
 
   <g font-size="15">
     <text x="430" y="86" class="v">BAILEYS</text>
-    <rect x="560" y="74" width="300" height="12" rx="2" fill="#141a26"/>
-    <rect x="560" y="74" width="0" height="12" rx="2" fill="#00f0ff">
+    <rect x="560" y="74" width="300" height="12" rx="2" fill="#1a1028"/>
+    <rect x="560" y="74" width="0" height="12" rx="2" fill="#ffe14d">
       <animate attributeName="width" values="0;255;255;0" keyTimes="0;0.3;0.9;1" dur="7s" repeatCount="indefinite"/>
     </rect>
 
     <text x="430" y="121" class="v">NODE.JS</text>
-    <rect x="560" y="109" width="300" height="12" rx="2" fill="#141a26"/>
-    <rect x="560" y="109" width="0" height="12" rx="2" fill="#4d9bff">
+    <rect x="560" y="109" width="300" height="12" rx="2" fill="#1a1028"/>
+    <rect x="560" y="109" width="0" height="12" rx="2" fill="#ff9a3c">
       <animate attributeName="width" values="0;240;240;0" keyTimes="0;0.33;0.9;1" dur="7s" repeatCount="indefinite"/>
     </rect>
 
     <text x="430" y="156" class="v">BACKEND</text>
-    <rect x="560" y="144" width="300" height="12" rx="2" fill="#141a26"/>
-    <rect x="560" y="144" width="0" height="12" rx="2" fill="#8a5cff">
+    <rect x="560" y="144" width="300" height="12" rx="2" fill="#1a1028"/>
+    <rect x="560" y="144" width="0" height="12" rx="2" fill="#ff3d81">
       <animate attributeName="width" values="0;195;195;0" keyTimes="0;0.36;0.9;1" dur="7s" repeatCount="indefinite"/>
     </rect>
 
-    <text x="430" y="191" class="v">TERMUX-FU</text>
-    <rect x="560" y="179" width="300" height="12" rx="2" fill="#141a26"/>
-    <rect x="560" y="179" width="0" height="12" rx="2" fill="#ff2e88">
+    <text x="430" y="191" class="v">DEBUGGING</text>
+    <rect x="560" y="179" width="300" height="12" rx="2" fill="#1a1028"/>
+    <rect x="560" y="179" width="0" height="12" rx="2" fill="#29e7ff">
       <animate attributeName="width" values="0;270;270;0" keyTimes="0;0.39;0.9;1" dur="7s" repeatCount="indefinite"/>
     </rect>
   </g>
 
-  <text class="blink" x="860" y="232" font-size="14" fill="#00f0ff" text-anchor="end">&gt; PRESS START</text>
+  <text class="blink" x="860" y="232" font-size="14" fill="#ffe14d" text-anchor="end">&gt;&gt; PRESS START &lt;&lt;</text>
 
-  <rect y="0" width="900" height="3" fill="#00f0ff" opacity="0.07">
+  <rect y="0" width="900" height="3" fill="#ff3d81" opacity="0.06">
     <animate attributeName="y" values="-5;265" dur="4s" repeatCount="indefinite"/>
   </rect>
 </g>
-<rect x="1" y="1" width="898" height="258" rx="14" fill="none" stroke="#1b2230" stroke-width="2"/>
+<rect x="1" y="1" width="898" height="258" rx="14" fill="none" stroke="#2a1740" stroke-width="2"/>
 </svg>
