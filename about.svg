@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 260" width="900" height="260">
+<defs>
+  <linearGradient id="g" x1="0" x2="1">
+    <stop offset="0" stop-color="#ff3d81"/><stop offset="0.55" stop-color="#ff9a3c"/><stop offset="1" stop-color="#ffe14d"/>
+  </linearGradient>
+  <clipPath id="frame"><rect width="900" height="260" rx="14"/></clipPath>
+  <clipPath id="type"><rect x="40" y="211" height="22" width="0">
+    <animate attributeName="width" values="0;490;490;0" keyTimes="0;0.4;0.9;1" dur="10s" repeatCount="indefinite"/></rect></clipPath>
+</defs>
+<style>
+  text{font-family:"Courier New",Courier,monospace}
+  .blink{animation:bl 0.8s steps(2) infinite}
+  @keyframes bl{50%{opacity:0}}
+</style>
+<g clip-path="url(#frame)">
+  <rect width="900" height="260" fill="#0d0716"/>
+
+  <g fill="#fff">
+    <circle cx="120" cy="30" r="1.5"><animate attributeName="opacity" values="0.2;1;0.2" dur="2.2s" repeatCount="indefinite"/></circle>
+    <circle cx="260" cy="70" r="1.5"><animate attributeName="opacity" values="1;0.2;1" dur="3s" repeatCount="indefinite"/></circle>
+    <circle cx="380" cy="26" r="2"><animate attributeName="opacity" values="0.2;1;0.2" dur="2.6s" repeatCount="indefinite"/></circle>
+    <circle cx="520" cy="62" r="1.5"><animate attributeName="opacity" values="1;0.2;1" dur="1.9s" repeatCount="indefinite"/></circle>
+    <circle cx="640" cy="34" r="1.5"><animate attributeName="opacity" values="0.2;1;0.2" dur="3.3s" repeatCount="indefinite"/></circle>
+    <circle cx="730" cy="88" r="2"><animate attributeName="opacity" values="1;0.2;1" dur="2.4s" repeatCount="indefinite"/></circle>
+    <circle cx="60" cy="90" r="1.5"><animate attributeName="opacity" values="0.2;1;0.2" dur="2.8s" repeatCount="indefinite"/></circle>
+  </g>
+  <circle cx="810" cy="80" r="26" fill="#ffe14d" opacity="0.9"/>
+  <circle cx="800" cy="72" r="5" fill="#ffd24d"/>
+  <circle cx="820" cy="90" r="3" fill="#ffd24d"/>
+
+  <g font-size="14" fill="#f3e9ff">
+    <text x="40" y="38"><tspan fill="#8a6aa8">SCORE </tspan>0000<animate attributeName="opacity" calcMode="discrete" values="1;0;0;0;0" keyTimes="0;0.2;0.4;0.6;0.8" dur="10s" repeatCount="indefinite"/></text>
+    <text x="40" y="38" opacity="0"><tspan fill="#8a6aa8">SCORE </tspan>0100<animate attributeName="opacity" calcMode="discrete" values="0;1;0;0;0" keyTimes="0;0.2;0.4;0.6;0.8" dur="10s" repeatCount="indefinite"/></text>
+    <text x="40" y="38" opacity="0"><tspan fill="#8a6aa8">SCORE </tspan>0200<animate attributeName="opacity" calcMode="discrete" values="0;0;1;0;0" keyTimes="0;0.2;0.4;0.6;0.8" dur="10s" repeatCount="indefinite"/></text>
+    <text x="40" y="38" opacity="0"><tspan fill="#8a6aa8">SCORE </tspan>0300<animate attributeName="opacity" calcMode="discrete" values="0;0;0;1;0" keyTimes="0;0.2;0.4;0.6;0.8" dur="10s" repeatCount="indefinite"/></text>
+    <text x="40" y="38" opacity="0"><tspan fill="#8a6aa8">SCORE </tspan>0400<animate attributeName="opacity" calcMode="discrete" values="0;0;0;0;1" keyTimes="0;0.2;0.4;0.6;0.8" dur="10s" repeatCount="indefinite"/></text>
+  </g>
+
+  <text x="450" y="40" font-size="20" font-weight="bold" fill="url(#g)" text-anchor="middle" letter-spacing="3">HANZO</text>
+  <rect x="505" y="24" width="56" height="20" rx="4" fill="#ffe14d">
+    <animate attributeName="opacity" values="1;0.65;1" dur="2s" repeatCount="indefinite"/>
+  </rect>
+  <text x="533" y="39" font-size="12" font-weight="bold" fill="#0d0716" text-anchor="middle">LV.99</text>
+
+  <text x="860" y="38" font-size="16" fill="#ff3d81" text-anchor="end">HP ♥ ♥ ♥
+    <animate attributeName="opacity" values="1;0.55;1" dur="1.4s" repeatCount="indefinite"/>
+  </text>
+
+  <line x1="0" y1="190.5" x2="900" y2="190.5" stroke="#ff3d81" stroke-width="2"/>
+  <line x1="0" y1="197" x2="900" y2="197" stroke="#4a2a6a" stroke-width="2" stroke-dasharray="30 90">
+    <animate attributeName="stroke-dashoffset" values="0;-120" dur="0.5s" repeatCount="indefinite"/>
+  </line>
+
+  <g transform="translate(0 120)">
+    <ellipse cx="0" cy="0" rx="7" ry="7" fill="#ffe14d" stroke="#ff9a3c" stroke-width="2">
+      <animate attributeName="rx" values="7;2;7" dur="0.8s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="920 0;-40 0" dur="4s" begin="-1.3s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+  <g transform="translate(0 95)">
+    <ellipse cx="0" cy="0" rx="7" ry="7" fill="#ffe14d" stroke="#ff9a3c" stroke-width="2">
+      <animate attributeName="rx" values="7;2;7" dur="0.8s" repeatCount="indefinite"/>
+      <animateTransform attributeName="transform" type="translate" values="920 0;-40 0" dur="4s" begin="-3s" repeatCount="indefinite"/>
+    </ellipse>
+  </g>
+
+  <g>
+    <animateTransform attributeName="transform" type="translate" values="920 165;-40 165" dur="4s" repeatCount="indefinite"/>
+    <rect x="3" y="6" width="24" height="14" fill="#3dff9a"/>
+    <rect x="20" y="9" width="4" height="4" fill="#0d0716"/>
+    <rect x="22" y="1" width="2" height="6" fill="#3dff9a"/>
+    <rect x="5" y="20" width="3" height="5" fill="#3dff9a"/>
+    <rect x="12" y="20" width="3" height="5" fill="#3dff9a"/>
+    <rect x="19" y="20" width="3" height="5" fill="#3dff9a"/>
+    <rect x="9" y="10" width="4" height="4" fill="#ff3d81"/>
+  </g>
+
+  <g transform="translate(120 150)">
+    <g>
+      <animateTransform attributeName="transform" type="translate" calcMode="spline" values="0 0;0 0;0 -75;0 0;0 0" keyTimes="0;0.76;0.85;0.94;1" keySplines="0 0 1 1;0 0.6 0.4 1;0.6 0 1 0.4;0 0 1 1" dur="4s" repeatCount="indefinite"/>
+      <rect x="5" y="0" width="20" height="5" fill="#ff3d81"/>
+      <rect x="5" y="5" width="20" height="10" fill="#ffd9b0"/>
+      <rect x="17" y="8" width="3" height="3" fill="#0d0716"/>
+      <rect x="5" y="15" width="20" height="15" fill="#29e7ff"/>
+      <rect x="0" y="17" width="5" height="8" fill="#29e7ff"/>
+      <g fill="#ffe14d">
+        <rect x="8" y="30" width="6" height="10"/><rect x="18" y="30" width="6" height="6"/>
+        <animate attributeName="opacity" calcMode="discrete" values="1;0" dur="0.3s" repeatCount="indefinite"/>
+      </g>
+      <g fill="#ffe14d">
+        <rect x="8" y="30" width="6" height="6"/><rect x="18" y="30" width="6" height="10"/>
+        <animate attributeName="opacity" calcMode="discrete" values="0;1" dur="0.3s" repeatCount="indefinite"/>
+      </g>
+    </g>
+  </g>
+
+  <rect x="20" y="203" width="860" height="47" rx="6" fill="#120a1f" stroke="#ff9a3c" stroke-width="2"/>
+  <g clip-path="url(#type)">
+    <text x="40" y="227" font-size="16" fill="#f3e9ff">HANZO: Lagi bikin bot WhatsApp, jangan di-spam ya!</text>
+  </g>
+  <text x="40" y="244" font-size="12" fill="#8a6aa8">CLASS Bot Developer  |  BASE Android  |  WEAPON Baileys</text>
+  <text class="blink" x="858" y="240" font-size="14" fill="#ffe14d" text-anchor="end">▼</text>
+
+  <rect y="0" width="900" height="3" fill="#ff3d81" opacity="0.06">
+    <animate attributeName="y" values="-5;265" dur="4s" repeatCount="indefinite"/>
+  </rect>
+</g>
+<rect x="1" y="1" width="898" height="258" rx="14" fill="none" stroke="#2a1740" stroke-width="2"/>
+</svg>
