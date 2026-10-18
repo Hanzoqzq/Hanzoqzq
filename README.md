@@ -3,5 +3,5 @@
 </p>
 
 <p align="center">
-  Bikin bot WhatsApp pakai Baileys, jalan di Termux dan Pterodactyl.
+  <img src="about.svg" alt="Player card" width="100%">
 </p>
